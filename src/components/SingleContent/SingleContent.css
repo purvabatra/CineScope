@@ -1,0 +1,212 @@
+/* Override the trending flexbox for grid layout */
+.trending {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+    justify-content: unset !important;
+    /* Remove flexbox justify-content */
+    flex-wrap: unset !important;
+    /* Remove flexbox wrap */
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Alternative: If you want to keep both .trending and .movies-grid classes */
+.movies-grid,
+.trending.movies-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+    justify-content: unset !important;
+    flex-wrap: unset !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    list-style: none !important;
+    /* if it's a ul/ol */
+}
+
+/* Make sure individual movie cards don't have conflicting styles */
+.movie-card {
+    background: #2d3748;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #4a5568;
+    transition: all 0.2s ease;
+    margin: 0 !important;
+    /* Remove any margin that might affect grid */
+    width: 100% !important;
+    /* Ensure cards fill grid cells */
+    box-sizing: border-box !important;
+}
+
+.movie-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.poster-container {
+    position: relative;
+    display: block !important;
+    /* Changed from inline-block */
+    width: 100%;
+}
+
+.movie-poster {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    display: block;
+}
+
+.vote-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #f44336;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.vote-badge.good {
+    background: #3f51b5;
+    box-shadow: 0 2px 8px rgba(63, 81, 181, 0.3);
+}
+
+.movie-info {
+    padding: 15px;
+    background: #2d3748;
+}
+
+.movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: white;
+    line-height: 1.2;
+    margin: 0 0 8px 0;
+}
+
+.movie-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movie-type {
+    color: #a0aec0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.movie-date {
+    color: #718096;
+    font-size: 13px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1199px) {
+
+    .trending,
+    .movies-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 18px !important;
+    }
+}
+
+@media (max-width: 899px) {
+
+    .trending,
+    .movies-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .trending,
+    .movies-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    .movie-poster {
+        height: 240px;
+    }
+
+    .movie-title {
+        font-size: 16px;
+    }
+
+    .movie-info {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .trending,
+    .movies-grid {
+        gap: 10px !important;
+    }
+
+    .movie-poster {
+        height: 200px;
+    }
+
+    .movie-info {
+        padding: 10px;
+    }
+
+    .movie-title {
+        font-size: 15px;
+    }
+}
+
+/* Alternative approach - if the above doesn't work, try this more specific selector */
+.movies-container .movies-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+}
+
+/* If using flexbox as fallback */
+.movies-grid-fallback {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.movies-grid-fallback .movie-card {
+    flex: 0 0 calc(25% - 15px) !important;
+    /* 4 columns */
+    margin: 0 !important;
+}
+
+@media (max-width: 1199px) {
+    .movies-grid-fallback .movie-card {
+        flex: 0 0 calc(33.333% - 12px) !important;
+        /* 3 columns */
+    }
+}
+
+@media (max-width: 899px) {
+    .movies-grid-fallback .movie-card {
+        flex: 0 0 calc(50% - 7.5px) !important;
+        /* 2 columns */
+    }
+}
