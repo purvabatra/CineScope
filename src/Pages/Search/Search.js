@@ -80,9 +80,11 @@ const Search = () => {
               vote_average={c.vote_average}
             />
           ))
-        ) : (
-          <h2 className="no-results"></h2>
-        )}
+        ) : searchText ? (
+          <h2 className="no-results">
+            {type ? "No TV Series Found" : "No Movies Found"}
+          </h2>
+        ) : null}
       </div>
 
       {numOfPages > 1 && (
