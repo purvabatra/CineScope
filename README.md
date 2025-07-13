@@ -6,20 +6,20 @@
 
 ## 🚀 Features
 
-- 🔍 Browse 100+ trending and upcoming movies  
-- 🎞️ View trailers and full cast info for each movie  
-- 🎯 Filter movies by genre  
-- ⚛️ Built with reusable components using React Hooks  
-- 🌐 Dynamic routing and conditional rendering  
+- 🔍 Browse 100+ trending and upcoming movies
+- 🎞️ View trailers and full cast info for each movie
+- 🎯 Filter movies by genre
+- ⚛️ Built with reusable components using React Hooks
+- 🌐 Dynamic routing and conditional rendering
 - 📱 Responsive layout for all screen sizes
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Frontend:** React.js, HTML, CSS, JavaScript  
-- **API Integration:** TMDB API  
-- **Routing:** React Router  
+- **Frontend:** React.js, HTML, CSS, JavaScript
+- **API Integration:** TMDB API
+- **Routing:** React Router
 - **Data Fetching:** Axios
 
 ---
@@ -34,19 +34,22 @@ cd CineScope
 npm install
 npm start
 
-🧠 What I Learned
-Integrating third-party APIs (TMDB) into a React project
+## 🧠 What I Learned
 
-Modularizing components with clean, maintainable code
+- Integrating third-party APIs (TMDB) into a React project
+- Modularizing components with clean, maintainable code
+- Implementing dynamic routing and conditional UI rendering
+- Designing responsive layouts using CSS
 
-Implementing dynamic routing and conditional UI rendering
+---
 
-Designing responsive layouts using CSS
+## 🔗 Live Demo
 
-🔗 Live Demo
-🌐 Click here to try CineScope live
+🌐 [Click here to try CineScope live](https://purva-cinescope.netlify.app/)
 
-📂 GitHub Repository
-🔗 github.com/purvabatra/CineScope
+---
 
+## 📂 GitHub Repository
 
+🔗 [github.com/purvabatra/CineScope](https://github.com/purvabatra/CineScope)
+```
