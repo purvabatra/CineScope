@@ -34,6 +34,7 @@ cd CineScope
 npm install
 npm start
 
+```
 ## 🧠 What I Learned
 
 - Integrating third-party APIs (TMDB) into a React project
